@@ -25,6 +25,8 @@ public class EmployeeController {
     public ResponseEntity<EmployeeDto> addEmployee(@RequestBody EmployeeDto dto){
         EmployeeDto empdto = employeeService.addEmployee(dto);
         empdto.setDate(new Date());
+        System.out.println(1000);
+        System.out.println(2000);
         return new ResponseEntity<>(empdto, HttpStatus.CREATED);
     }
     @DeleteMapping
